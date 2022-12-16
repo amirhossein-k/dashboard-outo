@@ -1,6 +1,13 @@
 import "./sidebar.scss";
 import { Row, Col } from "react-bootstrap";
-
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import StoreIcon from "@mui/icons-material/Store";
+import InsertChartIcon from "@mui/icons-material/InsertChart";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import LogoutIcon from "@mui/icons-material/Logout";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -18,19 +25,32 @@ const Sidebar = () => {
       <Row className="center" style={{ marginLeft: 0, marginRight: 0 }}>
         <ul>
           <li>
+            <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
           <li>
-            <span>Dashboard</span>
+            <StoreIcon className="icon" />
+            <span>Product</span>
           </li>
           <li>
-            <span>Dashboard</span>
+            <InsertChartIcon className="icon" />
+            <span>Status</span>
           </li>
           <li>
-            <span>Dashboard</span>
+            <NotificationsNoneIcon className="icon" />
+            <span>Notification</span>
           </li>
           <li>
-            <span>Dashboard</span>
+            <SettingsApplicationsIcon className="icon" />
+            <span>Setting</span>
+          </li>
+          <li>
+            <AccountCircleIcon className="icon" />
+            <span>Profile</span>
+          </li>
+          <li>
+            <LogoutIcon className="icon" />
+            <span>Logout</span>
           </li>
         </ul>
       </Row>
