@@ -1,5 +1,7 @@
 import "./home.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "../../components/navbar/Navbar";
+import Widgets from "../../components/widgets/Widgets";
 import { Container, Col, Row } from "react-bootstrap";
 const Home = () => {
   return (
@@ -17,15 +19,24 @@ const Home = () => {
             paddingRight: 0,
             maxWidth: "100vh",
             paddingLeft: 0,
+            mimWidth: "100%",
           }}
-          sm={2}
-          md={3}
-          lg={3}
+          sm={1}
+          md={1}
+          lg={2}
         >
           <Sidebar />
         </Col>
-        <Col style={{ paddingLeft: 0, paddingRight: 0 }} sm={10} md={9} lg={9}>
-          <div className="homeContainer">container</div>
+        <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
+          <div className="homeContainer">
+            {/* <Navbar /> option  */}
+            <div className="widgets">
+              <Widgets />
+              <Widgets />
+              <Widgets />
+              <Widgets />
+            </div>
+          </div>
         </Col>
       </Row>
     </Container>
