@@ -13,8 +13,9 @@ const Home = () => {
         paddingRight: 0,
       }}
     >
-      <Row className="home" style={{ marginLeft: 0, marginRight: 0 }}>
+      <Row className="home g-0" style={{ marginLeft: 0, marginRight: 0 }}>
         <Col
+          className="g-0"
           style={{
             paddingRight: 0,
             maxWidth: "100vh",
@@ -27,9 +28,10 @@ const Home = () => {
         >
           <Sidebar />
         </Col>
-        <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
-          <div className="homeContainer">
-            {/* <Navbar /> option  */}
+        <Col style={{ paddingLeft: 0, paddingRight: 0 }} className="g-0">
+          <div className="homeContainer g-0">
+            {/* option  */}
+            {/* <Navbar /> */}
             <div className="widgets">
               <Widgets />
               <Widgets />
