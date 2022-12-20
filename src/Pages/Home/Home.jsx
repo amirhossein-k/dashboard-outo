@@ -15,7 +15,7 @@ const Home = () => {
     >
       <Row className="home g-0" style={{ marginLeft: 0, marginRight: 0 }}>
         <Col
-          className="g-0"
+          className="g-0 flex-basis-0"
           style={{
             paddingRight: 0,
             maxWidth: "100vh",

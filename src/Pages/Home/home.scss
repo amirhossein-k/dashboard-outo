@@ -1,7 +1,7 @@
 .home {
   display:flex;
   .homeContainer{
-      background-color:lightblue;
+      // background-color:lightblue;
       flex:6 !important;
       .widgets{
         display:flex;
@@ -15,6 +15,12 @@
           height: 100vh;
     }
   }
+   @media (min-width:992px){
+    .flex-basis-0{
+         flex-basis:103px;
+    }
+  }
+
 .row {
 	--bs-gutter-x: 0;
 }

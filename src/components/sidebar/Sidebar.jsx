@@ -14,10 +14,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [clickbutton, setClickbutton] = useState(false);
 
-  window.onresize = function () {
-    // myFunction();
-    // myFunction2();
-  };
+ 
   function myFunction() {
     if (window.innerWidth < 991) {
       setIsOpen(false);
@@ -32,6 +29,10 @@ const Sidebar = () => {
       setExpantnav(false);
     }
   }
+    //  window.onresize = function () {
+    
+    // myFunction2();
+    //  }
   return (
     <div
       className="sidebar navbar navbar-expand-sm"
@@ -39,10 +40,10 @@ const Sidebar = () => {
         width: isOpen ? null : null,
         minHeight: "100%",
 
-        display: "block ",
+        
       }}
     >
-      {expantnav && (
+      {/* {expantnav && (
         <button
           class="navbar-toggler"
           type="button"
@@ -55,7 +56,19 @@ const Sidebar = () => {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-      )}
+      )} */}
+       <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={() => setClickbutton(!clickbutton)}
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       <div
         class={`collapse navbar-collapse  ${
           clickbutton ? "d-none" : "d-block"
