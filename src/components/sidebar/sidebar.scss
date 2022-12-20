@@ -39,6 +39,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .title{
                 font-size:10px;
                 font-weight:bold;
@@ -51,22 +55,37 @@
                 align-items:center;
                 padding:5px;
                 cursor:pointer;
+                justify-content: center;
+                width: 100%;
                 
                 &:hover{
                     background-color:#3c38ff;
                 }
                 .icon{
-                    font-size:18px;
+                    font-size:21px;
                     color:#7451f8;
+                }
+                @media (max-width: 576px){
+                    .icon{
+                           font-size:28px;
+                    }
                 }
                 span{
                     font-size:13px;
                     font-weight:600;
                     color:#888;
                     margin-left:10px;
+                    display:block;
+                   
                     }
             }
+             
             }
+             @media (max-width: 576px){
+                    span{
+                          display:none;
+                    }
+                }
     } ///end center
     .bottom{
         display:flex;
@@ -96,3 +115,13 @@
     }
 
 }/////end slidebar
+
+.collapse-b{
+    display:block !important;
+}
+@media (min-width: 576px){
+.navbar-expand-sm .navbar-collapse {
+    display: block !important;
+    
+}
+}

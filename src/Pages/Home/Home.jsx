@@ -22,8 +22,9 @@ const Home = () => {
             paddingLeft: 0,
             mimWidth: "100%",
           }}
+          xs={12}
           sm={1}
-          md={1}
+          md={2}
           lg={2}
         >
           <Sidebar />

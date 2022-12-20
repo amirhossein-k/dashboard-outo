@@ -12,10 +12,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 const Sidebar = () => {
   const [expantnav, setExpantnav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [clickbutton, setClickbutton] = useState(false);
 
   window.onresize = function () {
-    myFunction();
-    myFunction2();
+    // myFunction();
+    // myFunction2();
   };
   function myFunction() {
     if (window.innerWidth < 991) {
@@ -35,10 +36,10 @@ const Sidebar = () => {
     <div
       className="sidebar navbar navbar-expand-sm"
       style={{
-        width: isOpen ? null : "fit-content",
-        minHeight: "100vh",
-        mimWidth: "100%",
-        display: "block !important",
+        width: isOpen ? null : null,
+        minHeight: "100%",
+
+        display: "block ",
       }}
     >
       {expantnav && (
@@ -50,14 +51,16 @@ const Sidebar = () => {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setClickbutton(!clickbutton)}
         >
           <span class="navbar-toggler-icon"></span>
         </button>
       )}
       <div
-        class="collapse navbar-collapse"
+        class={`collapse navbar-collapse  ${
+          clickbutton ? "d-none" : "d-block"
+        } d-xs-none`}
         id="navbarSupportedContent"
-        style={{ display: "block" }}
       >
         <Row
           className="top"
