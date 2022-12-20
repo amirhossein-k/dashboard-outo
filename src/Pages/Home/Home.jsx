@@ -33,11 +33,12 @@ const Home = () => {
           <div className="homeContainer g-0">
             {/* option  */}
             {/* <Navbar /> */}
-            <div className="widgets">
-              <Widgets />
-              <Widgets />
-              <Widgets />
-              <Widgets />
+            <div className="widgets row">
+              <Col><Widgets type='user' /></Col>
+              <Col> <Widgets type="order"  /></Col>
+              <Col><Widgets type="erarning"  /></Col>
+              <Col> <Widgets type="balance"  /></Col>
+              
             </div>
           </div>
         </Col>

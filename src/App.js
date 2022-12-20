@@ -9,7 +9,7 @@ import Login from "./Pages/Login/Login";
 export default function App() {
   return (
     <BrowserRouter>
-      <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
+      <Container fluid style={{ paddingLeft: 0, paddingRight: 0 ,minWidth: 'fit-content'}}>
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />

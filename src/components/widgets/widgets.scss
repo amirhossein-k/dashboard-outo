@@ -30,18 +30,21 @@
             display:flex;
             align-items:center;
             font-size:14px;
-        }
-            .positive{
+            &.positive{
                 color:green;
             }
-            .negetive{
+            &.negetive{
                 color:red;
             }
-        .icon{
-            font-size:18px;
-            padding:5px;
-            background-color:rgba(128,0,128,0.541);
-            border-radius:5px;
         }
+        .icon{
+            font-size:28px;
+            padding:5px;
+            // background-color:rgba(128,0,128,0.541);
+            border-radius:5px;
+            align-self: flex-end;
+            height:auto;
+        }
+        
     }
 }
