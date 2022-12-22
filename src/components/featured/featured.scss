@@ -3,12 +3,44 @@
     -webkit-box-shadow: -4px 3px 9px -9px #000000, 2px -5px 9px -9px #000000;
     box-shadow: -4px 3px 9px -9px #000000, 2px -5px 9px -9px #000000;
     padding:10px;
+    margin: 0 18px;
     
     .top{
         display:flex;
         align-items:center;
         justify-content:space-between;
         color:gray;
+        .title{
+            font-size:16px;
+            font-weight:500;
+        }
+    }
+    
+    .bottom{
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:15px;
+        .featuredChart{
+            width:100px;
+            height:100px;
+        }
+        
+        .title{
+            font-weight:500;
+            color:gray;
+        }
+        .amount{
+            font-size:30px;
+        }
+        .desc{
+            font-size:12px;
+            font-weight:300;
+            color:gray;
+            text-align:center;
+        }
     }
 
 }
