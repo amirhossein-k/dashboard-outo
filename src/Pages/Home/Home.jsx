@@ -2,6 +2,8 @@ import "./home.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widgets from "../../components/widgets/Widgets";
+import Featured from "../../components/featured/Featured";
+import Chart from "../../components/chart/Chart";
 import { Container, Col, Row } from "react-bootstrap";
 const Home = () => {
   return (
@@ -34,11 +36,29 @@ const Home = () => {
             {/* option  */}
             {/* <Navbar /> */}
             <div className="widgets row">
-              <Col><Widgets type='user' /></Col>
-              <Col> <Widgets type="order"  /></Col>
-              <Col><Widgets type="erarning"  /></Col>
-              <Col> <Widgets type="balance"  /></Col>
-              
+              <Col md={6} lg={3}>
+                <Widgets type="user" />
+              </Col>
+              <Col md={6} lg={3}>
+                {" "}
+                <Widgets type="order" />
+              </Col>
+              <Col md={6} lg={3}>
+                <Widgets type="erarning" />
+              </Col>
+              <Col md={6} lg={3}>
+                {" "}
+                <Widgets type="balance" />
+              </Col>
+            </div>
+            <div className="chart row">
+              <Col>
+                {" "}
+                <Featured />
+              </Col>
+              <Col>
+                <Chart />
+              </Col>
             </div>
           </div>
         </Col>

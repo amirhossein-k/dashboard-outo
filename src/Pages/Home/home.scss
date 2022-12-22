@@ -3,10 +3,14 @@
   .homeContainer{
       // background-color:lightblue;
       flex:6 !important;
-      .widgets{
+      .widgets,charts{
         display:flex;
         padding:20px;
         gap:20px;
+      }
+      
+      .charts{
+        padding:5px 20px;
       }
   }
 }
@@ -28,4 +32,16 @@
   .col-md-1{
    flex-basis: 0%;
   }
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 47%;
+
+  }
+
+}
+@media (min-width: 992px){
+.col-lg-3 {
+    flex: 0 0 auto;
+    width: 23%;
+}
 }
