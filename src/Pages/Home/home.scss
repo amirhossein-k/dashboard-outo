@@ -12,11 +12,26 @@
       .charts{
         padding:5px 20px;
       }
+      .listContainer{
+            -webkit-box-shadow: -4px 3px 9px -9px #000000, 2px -5px 9px -9px #000000;
+             box-shadow: -4px 3px 9px -9px #000000, 2px -5px 9px -9px #000000;
+             padding:20px;
+             margin:20px;
+             
+             .listTitle{
+               font-weight:500;
+               color:gray;
+               margin-bottom:15px;
+             }
+      }
   }
 }
   @media (min-width:576px){
     .home{
           height: 100vh;
+    }
+    .sm-fix{
+      flex: 1 0 auto;
     }
   }
    @media (min-width:992px){

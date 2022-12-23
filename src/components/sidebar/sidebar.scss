@@ -121,7 +121,7 @@
 .collapse{
     transition: all 2s ease-in;
 }
-@media (max-width: 576px){
+@media (max-width: 768px){
                     .sidebar{
                         display: flex;
                         position: relative;
@@ -133,8 +133,8 @@
 .collapse-b{
     display:block !important;
 }
-@media (min-width: 576px){
-.navbar-expand-sm .navbar-collapse {
+@media (min-width: 768px){
+.navbar-expand-md .navbar-collapse {
     display: block !important;
     
 }
