@@ -21,7 +21,7 @@ const Chart = () => {
   return (
   <div className="chart">
     <div className="title">Last 12 month </div>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <ResponsiveContainer width="100%" height='100%' aspect={2 / 1}>
       <LineChart
       width={500}
       height={300}
@@ -34,8 +34,8 @@ const Chart = () => {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
+      <XAxis dataKey="name" stroke="rgba(0,0,0,0.5)"/>
+      {/* <YAxis /> */}
       <Tooltip />
       <Legend />
       <Line
@@ -43,8 +43,10 @@ const Chart = () => {
         dataKey="Total"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
+        
       />
-      <Line type="monotone" dataKey="Total" stroke="#82ca9d" />
+      {/* ///line two */}
+      {/* <Line type="monotone" dataKey="Total" stroke="#82ca9d" /> */}
     </LineChart>
 </ResponsiveContainer>
   </div>

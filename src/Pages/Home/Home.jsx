@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Widgets from "../../components/widgets/Widgets";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
+import Table from "../../components/table/Table";
 import { Container, Col, Row } from "react-bootstrap";
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
             mimWidth: "100%",
           }}
           xs={12}
-          sm={1}
+          // sm={1}
           md={2}
           lg={2}
         >
@@ -51,13 +52,18 @@ const Home = () => {
                 <Widgets type="balance" />
               </Col>
             </div>
-            <div className="chart row">
-              <Col sm={12} md={4}>
+            {/* //charts className */}
+            <div className="  row "> 
+              <Col xs={12} sm={11} md={4} className="sm-fix">
                 <Featured />
               </Col>
-              <Col sm={11} md={8}>
+              <Col xs={12} sm={11} md={8} style={{maxWidth: '99%'}} className="sm-fix">
                 <Chart />
               </Col>
+            </div>
+            <div className="row listContainer">
+              <div className="listTitle"> Last Transcations </div>
+              <Table/>
             </div>
           </div>
         </Col>

@@ -14,27 +14,27 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [clickbutton, setClickbutton] = useState(false);
 
-  function myFunction() {
-    if (window.innerWidth < 991) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-  }
-  function myFunction2() {
-    if (window.innerWidth <= 576) {
-      setExpantnav(true);
-    } else {
-      setExpantnav(false);
-    }
-  }
+  // function myFunction() {
+  //   if (window.innerWidth < 991) {
+  //     setIsOpen(false);
+  //   } else {
+  //     setIsOpen(true);
+  //   }
+  // }
+  // function myFunction2() {
+  //   if (window.innerWidth <= 576) {
+  //     setExpantnav(true);
+  //   } else {
+  //     setExpantnav(false);
+  //   }
+  // }
   //  window.onresize = function () {
 
   // myFunction2();
   //  }
   return (
     <div
-      className="sidebar navbar navbar-expand-sm"
+      className="sidebar navbar navbar-expand-md"
       style={{
         width: isOpen ? null : null,
         minHeight: "100%",
@@ -70,7 +70,7 @@ const Sidebar = () => {
       <div
         class={`collapse navbar-collapse  ${
           clickbutton ? "d-none" : "d-block"
-        } d-xs-none`}
+        } `}
         id="navbarSupportedContent"
       >
         <Row
