@@ -52,11 +52,10 @@ const Home = () => {
               </Col>
             </div>
             <div className="chart row">
-              <Col>
-                {" "}
+              <Col sm={12} md={4}>
                 <Featured />
               </Col>
-              <Col>
+              <Col sm={11} md={8}>
                 <Chart />
               </Col>
             </div>
