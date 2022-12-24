@@ -15,13 +15,19 @@
       .listContainer{
             -webkit-box-shadow: -4px 3px 9px -9px #000000, 2px -5px 9px -9px #000000;
              box-shadow: -4px 3px 9px -9px #000000, 2px -5px 9px -9px #000000;
-             padding:20px;
+            //  padding:20px;
              margin:20px;
              
              .listTitle{
                font-weight:500;
                color:gray;
                margin-bottom:15px;
+             }
+             .col{
+                   padding: 10px;
+             }
+             .col{
+                   padding: 10px;
              }
       }
   }

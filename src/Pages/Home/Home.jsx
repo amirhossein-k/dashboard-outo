@@ -62,9 +62,12 @@ const Home = () => {
               </Col>
             </div>
             <div className="row listContainer">
-              <div className="listTitle"> Last Transcations </div>
-              <Tables/>
+              <Col xs={11}>
+                <div className="listTitle"> Last Transcations </div>
+                <Tables/>
+              </Col>
             </div>
+              
           </div>
         </Col>
       </Row>

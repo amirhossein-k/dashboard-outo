@@ -6,7 +6,7 @@ import Navbar from '../../components/navbar/Navbar'
 // ...............
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'carName', headerName: 'نام محصول', width: 130, renderCell: (params) =>{
+  { field: 'carName', headerName: 'نام محصول', width: 210, renderCell: (params) =>{
         return(
             <div className="cellWithImg">
                 <img className="cellImg" src={params.row.img} alt="avatar" />
@@ -16,12 +16,12 @@ const columns = [
     },
     
  },
-  { field: 'factoryName', headerName: 'شرکت', width: 130 },
+  { field: 'factoryName', headerName: 'شرکت', width: 100 },
   {
     field: 'distance',
     headerName: 'کارکرد',
     type: 'number',
-    width: 90,
+    width: 80,
   },
   {
     field: 'full',
@@ -40,6 +40,17 @@ const columns = [
     }
       
   },
+  {
+    field: 'status',
+    headerName: 'وضعیت',
+    type: 'number',
+    width: 80,
+    renderCell: (params)=>{
+      return(
+        <span className={` status ${params.row.statusEn}`}>{params.row.status}</span>
+      )
+    }
+  }
 ];
 
   const rows = [
@@ -62,16 +73,27 @@ const columns = [
   { id: 9, carName: 'پرشیا', factoryName: 'ایرانخودرو', distance: 65 ,
    img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg' ,status:"فروخته",statusEn:'Approved'  }
 ];
+
 // ......................................................
+const actionColumn = [{field:'action',headerName:"Action",width:160,renderCell:()=>{
+  return(
+    <div className="cellAction">
+      <div className="viewButton">View</div>
+      <div className="deleteButton">Delete</div>
+    </div>
+  )
+}}]
+//.......................................................
+
 const Datatable = () => {
   return (
    <div className="datatable">
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ height: '100%', width: '100%' }}>
       <DataGrid
         rows={rows}
-        columns={columns}
-        pdistanceSize={5}
-        rowsPerPdistanceOptions={[5]}
+        columns={columns.concat(actionColumn)}
+        pdistanceSize={9}
+        rowsPerPdistanceOptions={[9]}
         checkboxSelection
       />
     </div>

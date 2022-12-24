@@ -6,11 +6,11 @@ import {Col} from 'react-bootstrap'
 const List = () => {
   return (
     <div className="list row">
-      <Col >
+      <Col sm={12} md={2} lg={1} className='fixlistnavbar'>
         <Sidebar/>
       </Col>
       
-      <Col>
+      <Col sm={12} md={10} lg={11}>
         <div className="listContainer">
           <Datatable/>
         </div>
