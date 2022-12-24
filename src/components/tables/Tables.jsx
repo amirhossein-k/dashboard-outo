@@ -44,15 +44,24 @@ import Paper from '@mui/material/Paper';
 
 const Tables = () => {
     const rows = [
-  { id: 1, carName: 'پراید', factoryName: 'ایرانخودرو', distance: 35 , img: 'https://res.cloudinary.com/dijamrzud/image/upload/v1668963162/thumb_1_zkrqty.jpg',status:"موجود" },
-  { id: 2, carName: '207i', factoryName: 'ایرانخودرو', distance: 42 , img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars3_o3p17a.jpg' ,status:"موجود"  },
-  { id: 3, carName: 'سمند', factoryName: 'ایرانخودرو', distance: 45 , img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg' ,status:"موجود" },
-  { id: 4, carName: 'پراید', factoryName: 'سایپا', distance: 16 , img: 'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars3_o3p17a.jpg',status:"موجود" },
-  { id: 5, carName: '207i', factoryName: 'ایرانخودرو', distance: 0 , img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars2_tgwa6d.jpg' ,status:"موجود" },
-  { id: 6, carName: 'پراید', factoryName: 'سایپا', distance: 150 , img: 'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars3_o3p17a.jpg',status:"موجود" },
-  { id: 7, carName: 'سمند', factoryName: 'ایرانخودرو', distance: 44 , img:"https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg" ,status:"موجود" },
-  { id: 8, carName: 'پراید', factoryName: 'سایپا', distance: 36 , img:"https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars2_tgwa6d.jpg" ,status:"موجود" },
-  { id: 9, carName: 'پرشیا', factoryName: 'ایرانخودرو', distance: 65 , img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg' ,status:"موجود" }
+  { id: 1, carName: 'پراید', factoryName: 'ایرانخودرو', distance: 35 ,
+   img: 'https://res.cloudinary.com/dijamrzud/image/upload/v1668963162/thumb_1_zkrqty.jpg',status:"فروخته",statusEn:'Approved' },
+  { id: 2, carName: '207i', factoryName: 'ایرانخودرو', distance: 42 ,
+   img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars3_o3p17a.jpg' ,status:"موجود" ,statusEn:'Pending'  },
+  { id: 3, carName: 'سمند', factoryName: 'ایرانخودرو', distance: 45 ,
+   img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg' ,status:"فروخته" ,statusEn:'Approved' },
+  { id: 4, carName: 'پراید', factoryName: 'سایپا', distance: 16 ,
+   img: 'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars3_o3p17a.jpg',status:"موجود" ,statusEn:'Pending' },
+  { id: 5, carName: '207i', factoryName: 'ایرانخودرو', distance: 0 , 
+  img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars2_tgwa6d.jpg' ,status:"فروخته",statusEn:'Approved'  },
+  { id: 6, carName: 'پراید', factoryName: 'سایپا', distance: 150 ,
+   img: 'https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars3_o3p17a.jpg',status:"فروخته" ,statusEn:'Approved' },
+  { id: 7, carName: 'سمند', factoryName: 'ایرانخودرو', distance: 44 ,
+   img:"https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg" ,status:"موجود",statusEn:'Pending'  },
+  { id: 8, carName: 'پراید', factoryName: 'سایپا', distance: 36 ,
+   img:"https://res.cloudinary.com/dijamrzud/image/upload/v1668962724/cars2_tgwa6d.jpg" ,status:"فروخته" ,statusEn:'Approved' },
+  { id: 9, carName: 'پرشیا', factoryName: 'ایرانخودرو', distance: 65 ,
+   img:'https://res.cloudinary.com/dijamrzud/image/upload/v1668963157/thumb_2_yk73fb.jpg' ,status:"فروخته",statusEn:'Approved'  }
 ];
   return (
 
@@ -86,7 +95,9 @@ const Tables = () => {
             </TableCell>
               <TableCell className="tableCell" >{row.factoryName}</TableCell>
               <TableCell className="tableCell" >{row.distance}</TableCell>
-              <TableCell className="tableCell" >{row.status}</TableCell>
+              <TableCell className="tableCell" >
+                <span className={` status ${row.statusEn}`}>{row.status}</span>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
