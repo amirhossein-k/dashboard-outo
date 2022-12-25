@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Widgets from "../../components/widgets/Widgets";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
-import Table from "../../components/table/Table";
+import Tables from "../../components/tables/Tables";
 import { Container, Col, Row } from "react-bootstrap";
 const Home = () => {
   return (
@@ -62,9 +62,12 @@ const Home = () => {
               </Col>
             </div>
             <div className="row listContainer">
-              <div className="listTitle"> Last Transcations </div>
-              <Table/>
+              <Col xs={11}>
+                <div className="listTitle"> Last Transcations </div>
+                <Tables/>
+              </Col>
             </div>
+              
           </div>
         </Col>
       </Row>
