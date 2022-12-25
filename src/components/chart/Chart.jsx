@@ -16,12 +16,12 @@ const data = [
   {name:'اسفند' , Total:1200},
 ];
 /////////
-const Chart = () => {
+const Chart = ({aspect,title}) => {
   
   return (
   <div className="chart">
-    <div className="title">Last 12 month </div>
-      <ResponsiveContainer width="100%" height='100%' aspect={2 / 1}>
+    <div className="title">{title} </div>
+      <ResponsiveContainer width="100%" height='100%' aspect={aspect}>
       <LineChart
       width={500}
       height={300}

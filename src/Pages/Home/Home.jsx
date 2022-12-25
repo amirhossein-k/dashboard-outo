@@ -58,7 +58,7 @@ const Home = () => {
                 <Featured />
               </Col>
               <Col xs={12} sm={11} md={8} style={{maxWidth: '99%'}} className="sm-fix">
-                <Chart />
+                <Chart title={'Last 12 month'} aspect={2 / 1}/>
               </Col>
             </div>
             <div className="row listContainer">
