@@ -25,6 +25,10 @@
             width: max-content;
             font-size:12px;
             border-bottom:3px solid gray;
+            cursor:pointer;
+            &:hover{
+                color:#93bbf8;
+            }
         }
         .perecentage{
             display:flex;
