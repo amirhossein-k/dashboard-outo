@@ -9,6 +9,8 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { NavLink } from "react-router-dom";
+
 const Sidebar = () => {
   const [expantnav, setExpantnav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -93,7 +95,12 @@ const Sidebar = () => {
             <li>
               <DashboardIcon className="icon" />
               <span style={{ display: isOpen ? "block" : "none" }}>
-                Dashboard
+                <NavLink
+                to="/"
+              >
+            Dashboard
+          </NavLink>
+                
               </span>
             </li>
             <p className="title">Lists</p>
