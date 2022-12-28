@@ -3,19 +3,21 @@ import "./new.scss";
 import { Col, Row, Button, Form, FormControl } from "react-bootstrap";
 import { TagsInput } from "react-tag-input-component";
 import { Link, useNavigate } from "react-router-dom";
-
+import {useDispatch,useSelector} from 'react-redux'
 import Sidebar from "../../components/sidebar/Sidebar";
 const New = () => {
   const [namecar, setNameCar] = useState("");
   const [factory, setFactory] = useState("");
   const [distance, setDistance] = useState("");
-  const [propertys, setPropertys] = useState("");
+  
   const [skills, setSkills] = useState([]);
   const [pic, setPic] = useState("");
-  // const skills=[]
+ 
+
   ////////////////////////
   let navigate = useNavigate();
   const fileInput = useRef(null);
+  const dispatch = useDispatch();
   //////////////////////
   useEffect(() => {
     // if (userInfo) {
@@ -55,6 +57,21 @@ const New = () => {
       return null;
     }
   };
+  //////////////
+  const resetHandler =()=>{
+    setNameCar('')
+    setFactory('')
+    setDistance('')
+  
+    setSkills([null])
+    fileInput.current.value = null
+    setPic('')
+  }
+  ///////////////
+  const submitHandler =(e)=>{
+    e.preventDefault();
+    if(!namecar || !factory || !distance || !skills ) return
+  }
   ///////////////
   return (
     <Row className="new">
@@ -69,14 +86,15 @@ const New = () => {
         </div>
         {/* ///// end top ////// */}
         <div className="bottom-new">
-          <img src={pic} className="imgproduct" />
-          <Form className="formfix">
+          {/* <img src={pic} className="imgproduct" /> */}
+          <img src={pic ? pic : null} className="imgproduct" />
+          <Form className="formfix" onSubmit={submitHandler}>
             <div className="form-0">
               <Form.Group controlId="pic">
                 <Form.Label>Profile Picture</Form.Label>
                 <Form.Control
                   type="file"
-                  // onChange={(e) => postDetails(e.target.files[0])}
+                  // onChange={(e) => setPics(e.target.files[0])}
                   onChange={(e) => postDetails(e.target.files[0])}
                   ref={fileInput}
                 />
@@ -130,6 +148,14 @@ const New = () => {
                 name="fruits"
                 placeHolder="ویژگی"
               />
+            </div>
+            <div className="button-new">
+              <Button type="submit" variant="primary" className="create-new">
+               Create Note
+             </Button>
+              <Button className="mx-2" onClick={resetHandler} variant="danger">
+                Reset Feilds
+              </Button>
             </div>
           </Form>
         </div>
