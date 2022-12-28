@@ -1,6 +1,9 @@
 .new{
     width:100%;
     display:flex;
+    .top{
+           padding: 14px 0 0 23px;
+    }
     .imgproduct{
         width:20%;
         transform: translateX(200%);
@@ -24,6 +27,14 @@
                 width: 100%;
                 gap: 10px;
                 }
+    }
+    .button-new{
+        .create-new{
+            background-color: darkblue;
+            &:hover{
+                background-color:blue;
+            }
+        }
     }
     
 }
