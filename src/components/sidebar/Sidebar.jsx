@@ -12,11 +12,14 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { NavLink } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 const Sidebar = () => {
   const [expantnav, setExpantnav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [clickbutton, setClickbutton] = useState(false);
-  
+  const lg=992;
   
   function myFunction() {
     if (window.innerWidth < 991) {
@@ -42,6 +45,7 @@ const Sidebar = () => {
       path: "/",
       name: "dashboard",
       icon: <DashboardIcon className="icon" />,
+      
     },
     {
       path: "/about",
@@ -52,6 +56,12 @@ const Sidebar = () => {
       path: "/products",
       name: "Product",
       icon:  <StoreIcon className="icon" />,
+    },
+    
+    {
+      path: "/products/new",
+      name: "New Post",
+      icon:  <NoteAltIcon className="icon" />,
     },
     {
       path: "/status",
@@ -110,16 +120,29 @@ const Sidebar = () => {
                 <Row className="center" style={{ marginLeft: 0, marginRight: 0 }}>
                     <ul>
                           {menuItem.map((item, index) => (
-                            <li key={index}>
+                            <li key={index} id={item.name}>
                             <NavLink to={item.path}  className="link" onClick={e=> console.log('click')}>
                                 <div className="icon">{item.icon}</div>
                                     <div className="link_text" style={{ display: isOpen ? "block" : "none" }}>
                                      {item.name}
                                     </div>
                             </NavLink>
+                             <ReactTooltip
+                              anchorId={item.name}
+                              place="bottom"
+                              content={item.name}
+                              className='d-xxl-none d-xl-none d-lg-none'
+                            />
                             </li>
                         ))}
                     </ul>
+                     {/* {menuItem.map((item, index) => (
+                       <ReactTooltip
+                              anchorId={item.name}
+                              place="bottom"
+                              content="Hello world! I'm a Tooltip"
+                            />
+                     ))} */}
                 </Row>
                 {/* //// */}
                 <Row className="bottom" style={{ marginLeft: 0, marginRight: 0 }}>
