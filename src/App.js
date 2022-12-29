@@ -11,7 +11,7 @@ export default function App() {
     <BrowserRouter>
       <Container fluid style={{ paddingLeft: 0, paddingRight: 0 ,minWidth: 'fit-content'}}>
         <Routes>
-          <Route path="/">
+          <Route path="/dashboard">
             <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="users">
