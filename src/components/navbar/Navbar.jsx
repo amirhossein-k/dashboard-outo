@@ -6,6 +6,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbars from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Navbar = () => {
   return (
